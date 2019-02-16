@@ -1,0 +1,47 @@
+CREATE (GPO1:GRUPO {NOMBRE:'Credito', RESPONSABLE:'Ericka Maria Bertado Cortes', TIPONODO:'GRUPO', IDNODO:'Credito'})
+CREATE (GPO2:GRUPO {NOMBRE:'Cobranza', RESPONSABLE:'Ericka Maria Bertado Cortes', TIPONODO:'GRUPO', IDNODO:'Cobranza'})
+
+//MATCH (n) DELETE n
+//MATCH (n) DETACH DELETE n
+
+
+CREATE (CEL_1_cdto:CELULA {NOMBRE:'Tarjeta de Crédito', TIPONODO:'CELULA', IDNODO:'1', REL:'CEL_1_cdto'})
+CREATE (CEL_2_cdto:CELULA {NOMBRE:'Nuevos Productos', TIPONODO:'CELULA', IDNODO:'2', REL:'CEL_2_cdto'})
+CREATE (CEL_3_cdto:CELULA {NOMBRE:'Originación y Nuevo Clientes', TIPONODO:'CELULA', IDNODO:'3', REL:'CEL_3_cdto'})
+CREATE (CEL_4_cdto:CELULA {NOMBRE:'Italika', TIPONODO:'CELULA', IDNODO:'4', REL:'CEL_4_cdto'})
+CREATE (CEL_5_cdto:CELULA {NOMBRE:'Administracion De Portafolios ', TIPONODO:'CELULA', IDNODO:'5', REL:'CEL_5_cdto'})
+CREATE (CEL_6_cdto:CELULA {NOMBRE:'Crédito al Consumo', TIPONODO:'CELULA', IDNODO:'6', REL:'CEL_6_cdto'})
+CREATE (CEL_7_cdto:CELULA {NOMBRE:'Préstamos Personales', TIPONODO:'CELULA', IDNODO:'7', REL:'CEL_7_cdto'})
+CREATE (CEL_8_cdto:CELULA {NOMBRE:'Tarjeta Azteca', TIPONODO:'CELULA', IDNODO:'8', REL:'CEL_8_cdto'})
+
+CREATE (CEL_9_cbza:CELULA {NOMBRE:'Cobranza Tardía', TIPONODO:'CELULA', IDNODO:'9', REL:'CEL_9_cbza'})
+CREATE (CEL_10_cbza:CELULA {NOMBRE:'Contact Center', TIPONODO:'CELULA', IDNODO:'10', REL:'CEL_10_cbza'})
+CREATE (CEL_11_cbza:CELULA {NOMBRE:'Unidad Avante', TIPONODO:'CELULA', IDNODO:'11', REL:'CEL_11_cbza'})
+CREATE (CEL_12_cbza:CELULA {NOMBRE:'CIC', TIPONODO:'CELULA', IDNODO:'12', REL:'CEL_12_cbza'})
+CREATE (CEL_13_cbza:CELULA {NOMBRE:'Extrajudicial', TIPONODO:'CELULA', IDNODO:'13', REL:'CEL_13_cbza'})
+CREATE (CEL_14_cbza:CELULA {NOMBRE:'Cobranza Relacional', TIPONODO:'CELULA', IDNODO:'14', REL:'CEL_14_cbza'})
+CREATE (CEL_15_cbza:CELULA {NOMBRE:'Herramientas de Trabajo', TIPONODO:'CELULA', IDNODO:'15', REL:'CEL_15_cbza'})
+CREATE (CEL_16_cbza:CELULA {NOMBRE:'Administración de RMD', TIPONODO:'CELULA', IDNODO:'16', REL:'CEL_16_cbza'})
+CREATE (CEL_17_cbza:CELULA {NOMBRE:'Venta de Cartera', TIPONODO:'CELULA', IDNODO:'17', REL:'CEL_17_cbza'})
+
+
+
+//relacion celulas
+CREATE 
+(CEL_1_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_2_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_3_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_4_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_5_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_6_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_7_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_8_cdto)-[:ES_CELULA_DE]->(GPO1),
+(CEL_9_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_10_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_11_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_12_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_13_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_14_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_15_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_16_cbza)-[:ES_CELULA_DE]->(GPO2),
+(CEL_17_cbza)-[:ES_CELULA_DE]->(GPO2)
